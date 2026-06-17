@@ -1,0 +1,278 @@
+body{
+    margin:0;
+    background:#070b14;
+    color:white;
+    font-family:Inter, Arial;
+
+    background-image:
+    radial-gradient(circle at 20% 20%, rgba(0,255,136,0.05), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(0,255,136,0.03), transparent 30%);
+}
+
+/* tela inicial */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+.start-screen{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#05070d,#0b1220);
+}
+
+.glass-card{
+    width:500px;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+
+    background:rgba(20,25,35,0.8);
+
+    border:1px solid #1c2d3d;
+
+    box-shadow:0 0 40px rgba(0,255,120,0.1);
+}
+
+.logo-area h1{
+    color:#00ff88;
+    margin:0;
+    font-size:42px;
+}
+
+.logo-area p{
+    color:#8b949e;
+}
+
+.hero-avatar{
+    width:220px;
+    margin:20px 0;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{ transform: translateY(0px); }
+    50%{ transform: translateY(-10px); }
+    100%{ transform: translateY(0px); }
+}
+
+.status-box{
+    display:flex;
+    justify-content:space-between;
+    margin:20px 0;
+    font-size:14px;
+}
+
+.start-button{
+    width:100%;
+    padding:18px;
+
+    background:linear-gradient(90deg,#00ff88,#00c96b);
+
+    color:black;
+    font-size:18px;
+    letter-spacing:1px;
+
+    border:none;
+    border-radius:14px;
+
+    font-weight:bold;
+    cursor:pointer;
+
+    box-shadow:0 0 20px rgba(0,255,136,0.4);
+    transition:0.3s;
+}
+
+.start-button:hover{
+    transform:scale(1.02);
+}
+
+/* AVATAR */
+.left{
+    width:30%;
+    background:#161b22;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#avatar{
+    width:85%;
+    transition: all 0.3s ease;
+}
+
+/* VTUBER */
+.avatar-idle{
+    filter: brightness(0.9);
+}
+
+.avatar-thinking{
+    filter: brightness(1.2) hue-rotate(20deg);
+    transform: scale(1.02);
+}
+
+.avatar-speaking{
+    filter: brightness(1.3);
+    animation: falar 0.2s infinite alternate;
+}
+
+@keyframes falar{
+    from{ transform: scale(1.05) }
+    to{ transform: scale(1.08) }
+}
+
+/* DIREITA */
+.right{
+    width:70%;
+    display:flex;
+    flex-direction:column;
+}
+
+.top{
+    padding:15px;
+    display:flex;
+    gap:12px;
+
+    background:#0f1724;
+    border-bottom:1px solid #1c2d3d;
+}
+
+/* COMPILADOR */
+/* PARTE DE CIMA DIVIDIDA */
+.top-half{
+    height:50%;
+    display:flex;
+    gap:10px;
+    padding:10px;
+}
+
+/* EDITOR (ESQUERDA) */
+.editor{
+    width:50%;
+    display:flex;
+}
+
+#codigo{
+    width:100%;
+    height:100%;
+
+    background:#0b1220;
+    color:#00ff88;
+
+    font-family:Consolas;
+    font-size:15px;
+
+    border:none;
+    padding:20px;
+    resize:none;
+}
+
+/* TERMINAL (DIREITA) */
+.terminal{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+#entrada{
+    background:#1e1e1e;
+    color:white;
+    border:none;
+    padding:8px;
+}
+
+#saida{
+    background:#020202;
+    color:#00ff88;
+    border-radius:12px;
+}
+
+/* CHAT */
+.bottom-half{
+    height:50%;
+    display:flex;
+    flex-direction:column;
+    border-top:2px solid #222;
+}
+
+#mensagens{
+    flex:1;
+    overflow-y:auto;
+    padding:10px;
+}
+
+.msg{
+    padding:14px;
+    border-radius:16px;
+    margin:10px;
+}
+
+.user{
+    background:#17233a;
+}
+
+.ia{
+    background:#143d27;
+    border:1px solid #00ff8840;
+}
+
+.input-area{
+    display:flex;
+}
+
+.input-area input{
+    flex:1;
+    background:#1e1e1e;
+    color:white;
+    border:none;
+    padding:10px;
+}
+
+button{
+    background:#111927;
+    color:#00ff88;
+
+    border:1px solid #1f4030;
+
+    padding:10px 20px;
+    border-radius:12px;
+
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#00ff88;
+    color:black;
+}
+
+.login{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+#aulas .msg{
+    cursor:pointer;
+    transition:0.2s;
+}
+
+#aulas .msg:hover{
+    background:#2ea043;
+}
+.login{
+    flex-direction:column;
+    gap:10px;
+}
+
+.login input{
+    background:#1e1e1e;
+    color:white;
+    border:none;
+    padding:10px;
+    width:250px;
+}

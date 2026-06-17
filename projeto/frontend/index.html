@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IA Professora</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- LOGIN SIMPLES -->
+<div id="loginScreen" class="start-screen">
+
+    <div class="glass-card">
+
+        <div class="logo-area">
+            <h1>Cinty A++</h1>
+            <p>Professora virtual de programação</p>
+        </div>
+
+        <img src="imagens/idle.gif" class="hero-avatar">
+
+        <div class="status-box">
+            <div>🟢 IA Online</div>
+            <div>📚 15 Lições</div>
+            <div>⚡ Sistema ativo</div>
+        </div>
+
+        <button onclick="entrarSemLogin()" class="start-button">
+            INICIAR
+        </button>
+
+    </div>
+
+</div>
+
+<div class="container" style="display:none">
+
+    <!-- AVATAR -->
+    <div class="left">
+        <img id="avatar" src="imagens/idle.gif">
+    </div>
+
+    <!-- DIREITA -->
+    <div class="right">
+
+        <!-- TOPBAR (CORRIGIDO) -->
+        <div class="top">
+            <button onclick="corrigirCodigo()">🧠 Corrigir</button>
+            <button onclick="abrirChat()">💬 Chat</button>
+            <button onclick="abrirAulas()">📚 Lições</button>
+            <button onclick="logout()">🚪 Sair</button>
+        </div>
+
+        <!-- COMPILADOR -->
+        <div class="top-half">
+
+            <!-- EDITOR -->
+            <div class="editor">
+                <textarea id="codigo" placeholder="Código C++..."></textarea>
+            </div>
+
+            <!-- TERMINAL -->
+            <div class="terminal">
+                <input id="entrada" placeholder="Entrada (cin)">
+                <button onclick="run()">▶ Executar</button>
+                <pre id="saida"></pre>
+            </div>
+
+        </div>
+
+        <!-- 🔥 NOVO: ÁREA DE AULAS -->
+        <div id="aulas" style="display:none; padding:10px;"></div>
+
+        <!-- CHAT -->
+        <div class="bottom-half">
+
+            <div id="mensagens"></div>
+
+            <div class="input-area">
+                <input id="pergunta" placeholder="Pergunte algo...">
+                <button onclick="chat()">Enviar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js?v=2"></script>
+</body>
+</html>
