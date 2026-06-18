@@ -412,3 +412,20 @@ async function corrigirCodigo(){
         corrigindoEmProgresso = false
     }
 }
+
+function abrirGuia(){
+
+    alert(`
+GUIA DO SISTEMA
+
+💬 Chat com IA
+📚 Lições de programação
+▶️ Compilar código C++
+🧠 Corrigir código
+🔊 Assistente com voz
+👤 Entrar sem login
+
+A Cinty esta em desemvolvimento ainda algumas funcionalidades n funcionam ainda, como cin, srand(time(0)),e funções.
+    `)
+
+}
